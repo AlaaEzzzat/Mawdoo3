@@ -34,10 +34,10 @@ $opacity : 0;
         width: 50%;
         a{
             text-decoration: none;
+            cursor: pointer;
             .navbar-brand{
                 font-size: 40px;
                 padding: 0;
-                cursor: pointer;
                 color: $navcolor;
                 text-decoration: none;
                 @include prefixer(transition, all 1s ease-in-out, webkit moz o); 
