@@ -1,0 +1,128 @@
+/* start profile */
+.profile{
+    margin-top: 40px;
+    padding-top: 50px;
+    background: linear-gradient(to top left, #00245f, #FFF);
+    @media (max-width:576px) {
+        padding-top: 35px;
+    }
+    .person{
+        padding: 30px 20px;
+        border: 1px solid #999;
+        background: linear-gradient(to top left, #27b5bb, #000);
+        border-radius: 5px;
+        color: #FFF;
+        margin-bottom: 30px;
+        .avatar{
+            border-radius: 50%;
+            margin: auto;
+            @include prefixer(background-size,cover, webkit moz o);
+            background-position: center;
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+            @media (min-width:768px) and (max-width:1200px) {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        .info-block{
+            text-transform: uppercase;
+            text-align: center;
+            margin-left: 10px;
+            .name{
+                margin-top: 20px;
+                font-size: 33px;
+                @media (min-width:768px) and (max-width:1200px) {
+                    font-size: 26px;
+                }
+                span{
+                    font-size: 26px;
+                    font-weight: 100;
+                    display: block;
+                    text-transform: capitalize;
+                    margin-bottom: 5px;
+                    @media (min-width:768px) and (max-width:1200px) {
+                        font-size: 22px;
+                    }
+                }
+            }
+            .job{
+                font-size: 23px;
+                @media (min-width:768px) and (max-width:1200px) {
+                    font-size: 20px;
+                }
+            }
+            .btn{
+                border: none;
+                font-size: 20px;
+                padding: 15px 30px;
+                background-color: $maincolor;
+                @include prefixer(transition, all .5s ease-in-out, webkit moz o);    
+                color: $secondcolor;
+                margin:auto;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+
+                &:hover{
+                    background-color: $secondcolor;
+                    color: #FFF;
+                }
+                @media (min-width:768px) and (max-width:1200px) {
+                    font-size: 18px;
+                    padding: 15px 20px;
+                }
+                .la-external-link-alt{
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+            }
+            .copy-icon{
+                a{
+                    i {
+                        margin: 0 10px;
+                        font-size: 40px;
+                        cursor: pointer;
+                        color: #FFF;
+                        border-radius: 50%;
+                        @include prefixer(transition, all .5s ease-in-out, webkit moz o);            
+                        padding: 2px;
+                        &:hover{
+                            background-color: #FFF;
+                        }
+                        @media (min-width:768px) and (max-width:1200px) {
+                            font-size: 29px;
+                            
+                        }
+                    }
+                }
+                .la-instagram:hover {
+                    color: #c13584
+                }
+                .la-twitter:hover {
+                    color: #1da1f2;
+                }
+                .la-facebook-f:hover {
+                    color: #3b5998;
+                }
+                .la-linkedin:hover {
+                    color: #dd5143
+                }
+            }
+        }
+
+
+    }
+    .alaa{
+        .avatar{
+            background-image: url("../img/alaa.jpg");
+        }
+    }
+    .mohamed{
+        .avatar{
+            background-image: url("../img/elsisy.jpg");
+        }
+    }
+}
+/* end profile*/

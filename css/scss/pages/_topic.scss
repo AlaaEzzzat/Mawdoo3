@@ -1,0 +1,209 @@
+.topic-page{
+    margin-top: 100px;
+
+    /* start breadcrumb*/
+    .breadcrumb{
+        padding : 10px;
+        background-color: #eaeaea;
+
+        .breadcrumb-item{
+
+            a{
+                color: $secondcolor;
+                text-decoration: none;
+                padding-left: 5px;
+                &:hover{
+                    color:$maincolor;
+                }
+            }
+
+        }
+        .active{
+            a{
+                color: $maincolor;
+            }
+        }
+    }
+    /* end breadcrumb*/
+
+    /*start content*/
+    .topic-content{
+        border: 1px solid $borderColor;
+        margin-bottom: 30px;
+        /*start topic*/
+        .the-topic{
+            padding: 20px;
+            .one{
+                background-image: url('../img/9.jpg');
+            }
+            .title{
+                font-size: 36px;
+            }
+            .info{
+                margin: 20px 0 ;
+                display: flex;
+                .avatar{
+                    width: 70px;
+                    display: inline-block;
+                    margin: auto;
+                    margin-left: 20px;
+                    margin-right: 0;
+                    height: 70px;
+                    background-image: url("../img/alaa.jpg");
+                    border-radius: 50%;
+                    @media (max-width:992px) {
+                        width: 25%;
+                    }
+                }
+                p{
+                    color: $paragColor;
+                    font-weight: 100;
+                    .writer{
+                        color: $maincolor;
+                        &:hover{
+                            color: $secondcolor;
+                        }
+    
+                    }
+                }
+                .detailes{
+                    margin-top: 20px;
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                    .last-update{
+                        padding: 5px 0;
+                        display: block;
+                        font-size: 12x;
+                        .date{
+                            color: #333;
+                        }
+        
+                    }
+                }
+                
+            }
+            
+            .tab{
+                background-position: center;
+                height: 350px;
+            }
+        }
+        .attatchment{
+            width: 80%;
+            margin: auto;
+            .more{
+                .head{
+                    font-size: 21px;
+                    i{
+                        color: $maincolor;
+                    }
+                }
+                .link{
+                    border-bottom: 1px solid $borderColor;
+                    padding: 10px;
+                    margin-bottom: 5px;
+                    a{
+                        color: $maincolor;
+                        @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+                        &:hover{
+                            color: $secondcolor;
+                        }
+                    }
+                }
+            }
+        }
+        .the-content{
+            .links{
+                border: 1px solid $borderColor;
+                padding: 15px;
+                background-color: $pargBK;
+                .link{
+                    padding: 5px 0;
+                    a{
+                        cursor: pointer;
+                        &:hover{
+                            color: $secondcolor;
+                        }
+                        span{
+                            color: $maincolor;
+                        }
+                        .num{
+                            margin-left: 5px;
+                            color: $secondcolor;
+                        }
+                    }
+                    font-size: 18px;
+
+                }
+            }
+        }
+        .articles-container{
+           .article{
+               border: 1px solid $borderColor;
+               padding: 10px;
+               margin-bottom: 20px;
+               .title {
+                font-size: 26px;
+                margin-top: 50px;
+                padding: 10px;
+                color: $maincolor;
+                .num{
+                    color: $secondcolor;
+                   }
+               }
+               
+               .part{
+                   border: 1px solid $borderColor;
+                   background-color: $pargBK;
+                   padding: 15px;
+                   margin-bottom: 15px;
+                   color: $paragColor;
+                   .text{
+                    font-size: 19px;
+                    margin-bottom: 10px;
+                    color: $secondcolor;
+                   }
+                   .desc{
+                    font-size: 15px;
+                   }
+               }
+           } 
+        }
+        /*start tabsection left side*/
+        /*------------this section hass css from BrowsingTopics-----*/
+        .visitors { 
+            margin: 10px;
+            .title{
+                border-bottom: 1px solid#e8e8e8;
+                padding: 10px 5px;
+                margin-left: 20px;
+            }
+            .tab{
+                height: 150px;
+                
+            }
+            .one{
+                background-image: url('../img/1.jpg');
+            }
+            .two{
+                background-image: url('../img/2.jpg');
+            }
+            .three{
+                background-image: url('../img/3.jpg');
+            }
+            .four{
+                background-image: url('../img/4.png');
+            } 
+            .five{
+                background-image: url('../img/5.jpg');
+            }
+            .six{
+                background-image: url('../img/6.jpg');
+            }
+
+        }
+        /*end tabsection left side*/
+    }
+    /* end content*/
+
+}

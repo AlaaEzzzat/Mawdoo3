@@ -1,0 +1,193 @@
+/* start about */
+.about-page{
+    padding-top: 130px;
+    .heading-section{
+        color: #FFF;
+        margin: auto;
+        text-align: center;
+        width: 80%;
+        margin-bottom: 30px;
+        .head-body{
+            position: relative;
+            background-position: center;
+            background-image: url("../img/header.jpg");
+            background-attachment: fixed;
+
+            @include prefixer(background-image-size,cover, webkit moz o); 
+            .head-text{
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 3;
+                padding: 40px 30px;
+                .header{
+                    font-size: 45px;
+                }
+                .header-link{
+                    font-size: 36px;
+                    margin-bottom: 20px;
+                }
+                .line{
+                    width: 80%;
+                    margin: 0 auto;
+                    border-bottom: 1px solid #FFF;
+                    height: 1px;
+                    margin: 10px auto;
+                }
+                .content{
+                    margin-top: 25px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .about{
+        padding: 50px 0;
+        text-align: center;
+        .title{
+            h2{
+                font-size: 36px;
+                margin: 20px 0;
+            }
+            p{
+                font-size: 18px;
+                width: 70%;
+                margin: auto;
+            }
+        }
+        .item{
+            margin-top: 50px;
+            .icon-img{
+                border-radius: 50%;
+                width: 170px;
+                margin: auto;
+                height: 170px;
+                margin-bottom: 10px;
+                background-position: center;
+                @include prefixer(background-image-size,cover, webkit moz o);    
+            
+            }
+            .one{
+                background-image: url("../img/ab1.png");
+            }
+            .two{
+                background-image: url("../img/ab2.png");
+            }
+            .three{
+                background-image: url("../img/ab3.png");
+            }
+            .four{
+                background-image: url("../img/ab4.png");
+            }
+            .five{
+                background-image: url("../img/ab5.png");
+            }
+            .six{
+                background-image: url("../img/ab6.png");
+            }
+            .seven{
+                background-image: url("../img/ab7.png");
+            }
+            .eight{
+                background-image: url("../img/ab8.png");
+            }
+            p{
+                font-size: 18px;
+                margin: 20px 0 ;
+            }
+        }
+    }
+    .needs{
+        background-color: #efefef;
+    }
+    /* roles & media section using css from UseRole.scss */  
+    .media{
+        .media-head{
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px ;
+        }
+        .global-col{
+            .role{
+                .role-head{
+                    .role-title{
+                        text-decoration: none;
+                        position: initial;
+                    }
+                    .by{
+                        margin-top: 10px;
+                        font-size: 14px;
+                        color: #555;
+                    }
+                }
+                .role-body{
+                    text-align: center;
+                    .more{
+                        border: none;
+                        border-radius: 5px;
+                        background-color: $maincolor;
+                        color: #FFF;
+                        padding: 15px 30px;
+                        margin-top: 20px;
+                        @include prefixer(transition, all .5s ease-in-out, webkit moz o);            
+                        &:hover{
+                            background-color: $secondcolor;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    .more{
+        padding-top: 50px;
+        background-color: #efefef;
+        .more-news{
+            font-size: 20px;
+        }
+        .news{
+            .item{
+                padding: 20px 0;
+                .title{
+                    color: $maincolor;
+                    font-size: 17px;
+                    text-decoration: none;
+                    margin-bottom: 20px;
+                }
+                p{
+                    color: #555;
+                    margin: 0!important;
+                    padding: 0 !important;
+                }
+                .first-p{
+                    font-size: 14px;
+                }
+                .second-p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+/*start advertising*/
+/* this section has css from the head section in the top of this file */
+    .advertising{
+        margin-top: 50px;
+        .head-body{
+            .head-text{
+                background-color: rgba(0, 0, 0, 0.5);
+                .contact{
+                    margin-top: 20px;
+                    border: none;
+                    background-color: $maincolor;
+                    border-radius: 5px;
+                    padding: 15px 30px;
+                    color: #FFF;
+                    @include prefixer(transition, all .5s ease-in-out, webkit moz o);            
+                    &:hover{
+                        background-color: $secondcolor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* end about */

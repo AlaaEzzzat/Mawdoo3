@@ -1,0 +1,72 @@
+
+
+
+/* start contact us */
+.contact {
+    .first-head {
+        padding: 40px 0 40px 0 ;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        font-size: 30px;
+        color: #333;
+        margin-top: 60px;
+    }
+    form {
+        margin: 0 30px;
+        border: 1px solid #999;
+        padding: 30px;
+        position: relative;
+        margin-bottom: 70px;
+        .first-p {
+            position: absolute;
+            top: -15px;
+            line-height: 1.4;
+            font-size: 16px;
+            margin-bottom: 50px;
+            background-color: #FFF;
+        }
+        .parts{
+            direction: ltr;
+            @media (max-width:768px) {
+                direction: rtl;
+            }
+            .mes-icon{
+                background-image: url(../img/mes.PNG);
+                width: 275px;
+                margin: auto;
+                margin-bottom: 50px;
+                margin-top: 30px;
+                height: 250px;
+                background-position: center;
+                @include prefixer(background-size,cover, webkit moz o);        
+            }
+            .form-control{
+                margin-left: 0;
+                border-radius: 5px;
+                border: 1px solid #999;
+                margin-bottom: 15px;
+                padding: 10px;
+            }
+            textarea {
+                height: 134px;
+            }
+            .send-button {
+                margin: 0;
+                padding: 12px 27px;
+                margin-top: 20px;
+                border: none;
+                color: #FFF;
+                background: linear-gradient(to top left, $maincolor, $secondcolor);
+                font-size: 19px;
+                border-radius: 8px;
+                @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+                &:hover{
+                    
+                background: linear-gradient(to left, $secondcolor, $maincolor);
+                
+                }
+            }
+        }
+    }
+}
+/* end contact us */

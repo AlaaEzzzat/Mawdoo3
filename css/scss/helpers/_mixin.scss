@@ -1,0 +1,89 @@
+/* prefix mixin */
+@mixin prefixer($prop, $value, $prefixes:()) {
+    @each $prefix in $prefixes {
+        #{"-" + $prefix + "-" + $prop} : $value
+    }
+    #{$prop} : $value;
+}
+/* overlay*/
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+}
+
+
+/* trnition */
+%tarnsition {
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+} 
+/* tab form */
+.tab {
+    position: relative;
+    height: 200px;
+    background-position: center;
+    @include prefixer(background-size,cover, webkit moz o);
+    margin: 20px 0;
+    border: 1px solid $borderColor;
+    &:hover{
+        .overlay{
+            display: none;
+        } 
+        .caption{
+            display: block;
+        }
+    }
+}
+ .caption{
+    @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+    padding: 17px 10px;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    bottom: 0;
+    a{
+        @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+        color: #FFF;
+        font-weight: bold;
+        &:hover{
+            color: $maincolor;
+        }
+    }
+}
+/* end tab form */
+.background{
+    background-position: center;
+    @include prefixer(background-size,cover, webkit moz o);
+}
+/************************/
+/* levels*/
+.level-one{
+    margin-right: 10px;
+}
+.level-two{
+    margin-right: 25px;
+    font-size: 15px;
+}
+.level-three{
+    margin-right: 35px;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

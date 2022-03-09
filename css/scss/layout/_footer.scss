@@ -1,0 +1,53 @@
+
+/* copyright */
+.copyright {
+    border-top: 2px solid #c0c0c0;
+    .copy-text {
+        p {
+            margin-top: 10px;
+            color: #727272;
+            font-size: 20px;
+        }
+    }
+    .copy-icon{
+        i {
+            margin-left: 20px;
+            font-size: 40px;
+            cursor: pointer;
+            color: $secondcolor;
+        }
+        .la-instagram:hover {
+            color: #c13584
+        }
+        .la-twitter:hover {
+            color: #1da1f2;
+        }
+        .la-facebook-f:hover {
+            color: #3b5998;
+        }
+        .la-linkedin:hover {
+            color: #dd5143
+        }
+    }
+    .about{
+        @media (max-width:992px) {
+            margin-top: 20px;
+        margin-right: 40px;
+        }
+        
+        ul{
+            li{
+                margin: 10px 0;
+                a{
+                    text-decoration: none;
+                    color: #000;
+                    &:hover{
+                    color: $maincolor;
+                }
+                }
+            }
+
+        }
+    }
+
+}

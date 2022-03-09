@@ -1,0 +1,228 @@
+*{
+    font-family: cairo;
+    text-decoration: none;
+}
+ ul, ol, a{
+     list-style: none;
+     text-decoration: none;
+     padding: 0;
+ }
+
+ .container{
+     overflow: hidden;
+ }
+ .heading{
+    margin-top: 65px;
+    .no-padding{
+        padding: 0 !important;
+    }    
+    .right-part{
+         @media (max-width : 992px) {
+            display: none;
+        }
+     }
+    .mid-part{
+        height: 90vh;
+        background-image: url('../img/header.JPG');
+        background-position: center;
+        @include prefixer(background-size,cover, webkit moz o);
+        .content{
+            width: 100%;
+            height: 100%;
+            padding:180px 75px;
+            color: #FFF;
+            border-radius: 5px;
+            background-color: rgba(0,0,0,0.5);
+            text-align: center;
+            @media (max-width : 768px) {
+                padding: 100px 75px;
+            }
+            .lead{
+                font-size: 28px;
+                font-weight: bold;
+            }
+        }
+    }
+    .left-part{
+        @media (max-width: 992px) {
+            display: none;
+        }
+    }
+    .tab{
+        width: 100%;
+        margin: 0;
+        height: 150px;
+        position: relative;
+        @media (max-width: 992px) {
+            height: 200px;
+        }
+    }
+    .mirged-part{
+        @media (min-width : 992px) {
+            display: none;
+        }
+    }
+    .right{
+        .one{
+            background-image: url('../img/1.jpg');
+        }
+        .two{
+            background-image: url('../img/2.jpg');
+        }
+        .three{
+            background-image: url('../img/3.jpg');
+        }
+        .four{
+            background-image: url('../img/4.png');
+        }
+    }
+    .left{
+        
+        .five{
+            background-image: url('../img/5.jpg');
+        }
+        .six{
+            background-image: url('../img/6.jpg');
+        }
+        .seven{
+            background-image: url('../img/7.png');
+        }
+        .eight{
+            background-image: url('../img/8.jpg');
+        }
+    }
+    .caption{
+        padding: 17px 10px;
+        font-size: 12px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        color: #FFF;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        border-radius: 10px 10px 0px 0px;
+        bottom: 0;
+        display: none;
+    }                       
+ }
+ /* end heading */
+ /* start list */
+ .listgroup{
+     padding: 50px 0;
+     .header-content{
+         position: relative;
+         padding: 50px 0;
+        .line{
+            border-bottom: 1px solid $maincolor;
+            position: absolute;
+            width: 30%;
+            top: 77px;
+            z-index: 1;
+            @media (max-width: 768px) {
+                width: 20%;
+            }
+           }
+           .l-one{
+               left: 0;
+
+   
+           }
+           .l-two{
+               right: 0;
+   
+           }
+            h2{
+               text-align: center;
+            }
+     }
+     .global-col{
+        .list-head{
+            border-bottom:1px solid #000;
+            @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+            font-size: 20px;
+            i{
+                font-size: 60px;
+            }
+            a{
+                position: absolute;
+                    bottom: 36px;
+            }
+            &:hover{
+                a,i{
+                    color: #FFF;
+                }
+            }
+        }
+        ul {
+            border: 1px solid $secondcolor;
+            li {
+                color: #000;
+                font-size: 18px;
+                padding :20px;
+                position: relative;
+                
+                a{
+                    @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+                    margin-right: 10px;
+                    color: #000;
+                    text-decoration: none;
+                    &:hover{
+                        color: $maincolor;
+                    }
+                }
+            }
+        }
+     }
+     .right-col{
+        .first{
+            border-bottom:2px solid $islamcolor;
+            .fa-mosque{
+                color: $islamcolor;
+            }
+            &:hover{
+                background-color: $islamcolor;
+            }
+        }
+        .second{
+            border-bottom:2px solid $chesscolor;
+            .fa-mosque{
+                color: $chesscolor;
+            }
+            &:hover{
+                background-color: $chesscolor;
+            }
+        }
+     }
+     .mid-col{
+        .first{
+            border-bottom:2px solid $foodcolor;
+            .fa-hamburger{
+                color: $foodcolor;
+            }
+
+            &:hover{
+                background-color: $foodcolor;
+            }
+        }
+     }
+     .left-col{
+         .img {
+             margin-bottom: 50px ;
+             width: 100%;
+
+         }
+        .first{
+            border-bottom:2px solid $healthycolor;
+            ;
+            .fa-apple-alt{
+                color: $healthycolor;
+                ;
+            }
+            &:hover{
+                background-color: $healthycolor;
+                ;
+            }
+        }
+
+     }
+ }

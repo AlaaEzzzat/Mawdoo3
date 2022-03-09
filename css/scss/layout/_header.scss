@@ -1,0 +1,161 @@
+/*start navbar*/
+
+$opacity : 0;
+
+.checker{
+    opacity: $opacity;
+    color: $maincolor;
+    @if $opacity == 1 {
+        $navcolor: $secondcolor !global;
+        $navbackcolor: $maincolor !global;
+    } @else{
+        $navcolor :$maincolor !global;
+        $navbackcolor: $secondcolor !global;
+    }
+}
+.navbar{
+    padding: 5px 0;
+    background-color: $navbackcolor;
+    position: fixed !important;
+    top: 0%;
+    z-index: 1000;
+    width: 100%;
+    padding-bottom: 10px;
+    @include prefixer(transition, all 1s ease-in-out, webkit moz o);
+    .navbar-toggler{
+        .navbar-toggler-icon{
+            background-color: $maincolor;
+        }
+    }
+    .brand{
+        position: relative;
+        font-weight: bold;
+        color: $navcolor;
+        width: 50%;
+        a{
+            text-decoration: none;
+            .navbar-brand{
+                font-size: 40px;
+                padding: 0;
+                cursor: pointer;
+                color: $navcolor;
+                text-decoration: none;
+                @include prefixer(transition, all 1s ease-in-out, webkit moz o); 
+            }
+        }
+        
+        .parg{
+            @include prefixer(transition, all 1s ease-in-out, webkit moz o);
+            font-size: 16px;
+            position: absolute;
+            top: 30px;
+            right:  155px;
+        }
+        @media (max-width:1200px) {
+            width: 80%;
+        }
+    }
+    .menu{
+        display: none;
+        @media (max-width:992px) {
+            display: block;
+        }
+        .navbar-toggler{
+            float: left;
+            padding: 9px 10px;
+            margin-top: 8px;
+            margin-left: 30px;
+            margin-bottom: 8px;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid $navcolor;
+            border-radius: 4px;
+            &:hover{
+                .navbar-toggler-icon{
+                background-color:$navcolor ;
+                }
+            }
+            
+            .navbar-toggler-icon{
+                background-color:#FFF;
+                display: block;
+                width: 22px;
+                height: 3px;
+                border-radius: 1px ;
+                margin-top: 3px;
+                @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+            }
+        }
+    }
+    .navbar-collapse{
+        float: left;
+        @media (max-width:992px) {
+            padding-right: 20px;
+        }
+        .navbar-nav{
+            margin-left: 15px;
+            margin-top: 15px;
+            flex-direction: row;
+            @media (max-width:992px) {
+                direction: rtl;
+            }
+            .nav-item{
+                display: inline-block !important;
+                .nav-link{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: $navcolor;
+                    cursor: pointer;
+                    &:hover{
+                        color:rgb(89, 80, 170) ;
+                    }
+                    @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+                    @media (max-width:992px) {
+                        margin: 0 10px ;
+                    }
+                }
+            }
+
+        }
+        .form{
+            margin-left: 50px;
+            margin-top: 15px;
+            
+            .btn{
+                border: 1px solid $navcolor;
+                margin-right: 10px;
+                color:$navcolor;
+                font-weight: bold;
+                &:hover{
+                    color:rgb(89, 80, 170) ;
+                }
+                @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+            }
+        }
+    }
+}
+
+.scrolling{
+    background-color: $navcolor;
+}
+.nav-text{
+    color: $navbackcolor !important;
+    &:hover{
+        color:#FFF!important;
+    }
+}
+.btn-text{
+    color: $navbackcolor !important;
+    border: 1px solid $navbackcolor !important;
+    &:hover{
+        color:#FFF !important;
+    }
+}
+.menu-btn {
+    border:  1px solid $navbackcolor !important;
+    &:hover{
+      .navbar-toggler-icon{
+        background-color:$navbackcolor!important;
+      }  
+    }
+} 

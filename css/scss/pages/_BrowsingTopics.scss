@@ -1,0 +1,94 @@
+
+.tabSection{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    .borderline{
+        border: 2px solid $borderColor;
+        padding: 20px;
+    }
+    .tabs{
+            .nav-tabs{
+                .nav-item{
+                    .nav-link{
+                        color: $maincolor;
+                    }
+                }
+
+            }
+
+        }
+        .one{
+            background-image: url('../img/9.jpg');
+        }
+        .two{
+            background-image: url('../img/2.jpg');
+        }
+        .three{
+            background-image: url('../img/3.jpg');
+        }
+        .four{
+            background-image: url('../img/4.png');
+        } 
+        .five{
+            background-image: url('../img/5.jpg');
+        }
+        .six{
+            background-image: url('../img/6.jpg');
+        }
+        /*tab div has css from mixin.scss*/
+    .left-side{
+        .img {
+            margin: 50px 0 ;
+            width: 100%;
+        }
+        ul{
+            margin: 0 20px;
+            li{
+                margin: 10px 0;
+                a{
+                    font-size: $listFont;
+                    color: $maincolor;
+                    &:hover{
+                        color: $secondcolor;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .first{
+                border-bottom: 2px solid $borderColor;
+                font-size: $listHead;
+                color: $secondcolor;
+                position: relative;
+                margin-top: 30px;
+                i{
+                    font-size: 55px;
+                    color: $maincolor;
+                    @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+                    &:hover{
+                        color: $secondcolor;
+                    }
+                }
+                a{
+                    position: absolute;
+                    bottom: 15px;
+                    padding: 0 5px;color: $secondcolor;
+                }
+            }
+
+        }
+    }
+}
+@media (max-width:576px){
+    .col-xsmall{
+        width: 50%;
+    }
+}
+.list{
+    display: none;
+}
+.on{
+    display: block;
+}
+.active{
+    color:$secondcolor!important;
+}
